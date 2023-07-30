@@ -19,9 +19,10 @@ public class Main {
         System.out.printf("Размер таблицы: %d \n", num);
         //Найдем предел циклов
         int maxInt = num + 1;
-        // Найдем порядок числа
+        // Найдем порядок максимального числа
         int maxTableRes = (maxInt) * (maxInt);
         int n = GetOrder(maxTableRes) ;
+        // Строка отступа
         String ots = ("_".repeat(n+1) + "+").repeat(num-1);
         int p;
         int result;
@@ -44,11 +45,9 @@ public class Main {
                 p = GetOrder(i);
                 System.out.printf(" ".repeat(n-p-1) + "%d" + "|" + strJ, i);
             }
-
             strJ = new StringBuilder();
             System.out.printf("\n%s+%s%s\n", "_".repeat(n), ots, "_".repeat(n+1));
         }
-
 
     }
 }
