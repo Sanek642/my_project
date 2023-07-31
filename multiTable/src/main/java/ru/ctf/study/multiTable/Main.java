@@ -20,21 +20,15 @@ public class Main {
             int num = abs(in.nextInt());
 
             System.out.printf("Размер таблицы: %d \n", num);
-            if (num == 1 || num == 0){
-                System.out.printf("%d", num);
-            }
+            if (num == 1 || num == 0) System.out.println(num);
             else {
                 //Найдем предел циклов
                 int maxInt = num + 1;
                 // Найдем порядок максимального числа
                 int maxTableRes = (num) * (num);
                 int n;
-                if (num < 4){
-                    n = 1;
-                }
-                else {
-                    n = GetOrder(maxTableRes);
-                }
+                if (num < 9) n = 1;
+                else n = GetOrder(maxTableRes);
                 // Строка отступа
                 String ots = ("_".repeat(n + 1) + "+").repeat(num - 1);
                 int p;
@@ -44,17 +38,13 @@ public class Main {
                     for (int j = 1; j < maxInt; j++) {
                         result = i * j;
                         p = GetOrder(result);
-                        if (j != num) {
-                            strJ.append(" ".repeat(n - p)).append(result).append("|");
-                        } else {
-                            strJ.append(" ".repeat(n - p)).append(result);
-                        }
+                        if (j != num) strJ.append(" ".repeat(n - p)).append(result).append("|");
+                        else strJ.append(" ".repeat(n - p)).append(result);
                     }
-                    if (i == 1) {
-                        System.out.printf(" ".repeat(n) + "|" + strJ);
-                    } else {
+                    if (i == 1) System.out.print(" ".repeat(n) + "|" + strJ);
+                    else {
                         p = GetOrder(i);
-                        System.out.printf(" ".repeat(n - p - 1) + "%d" + "|" + strJ, i);
+                        System.out.print(" ".repeat(n - p - 1) + i + "|" + strJ);
                     }
                     strJ = new StringBuilder();
                     System.out.printf("\n%s+%s%s\n", "_".repeat(n), ots, "_".repeat(n + 1));
