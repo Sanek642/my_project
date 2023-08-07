@@ -24,7 +24,7 @@ public class Main {
                 }
                 count++;
             }
-            //После того как прочитали все что можно прочитать запишем в файл.
+            //После того как прочитали, все что можно прочитать, запишем в файл.
             try (FileOutputStream fileOutputStream = new FileOutputStream(args[1])) {
                 System.out.println("Начинаем запись " + shapesArrayList.size());
                 for (shapes shapeWrite : shapesArrayList) {
@@ -45,9 +45,6 @@ public class Main {
         }
         catch(IOException ex){
             System.out.println(ex.getMessage());
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
         }
-
     }
 }
