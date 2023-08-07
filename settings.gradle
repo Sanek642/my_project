@@ -10,4 +10,5 @@
 rootProject.name = 'my_project'
 include 'lesson_one'
 include 'multiTable'
+include 'shapes'
 

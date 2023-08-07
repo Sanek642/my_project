@@ -1,0 +1,12 @@
+CIRCLE
+12
+RECTANGLE
+10 3
+TRIANGLE
+1 2
+аеру
+е 3
+TRIANGLE
+6 6 7
+аеру
+е 3
