@@ -26,7 +26,7 @@ public class Main {
             }
             //После того как прочитали, все что можно прочитать, запишем в файл.
             try (FileOutputStream fileOutputStream = new FileOutputStream(args[1])) {
-                System.out.println("Начинаем запись " + shapesArrayList.size());
+                System.out.println("Начинаем запись, колличество считанных фигур " + shapesArrayList.size());
                 for (shapes shapeWrite : shapesArrayList) {
                     if (shapeWrite instanceof circle) {
                         circle c = (circle) shapeWrite;
