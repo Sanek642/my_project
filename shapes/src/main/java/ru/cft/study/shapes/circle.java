@@ -19,11 +19,11 @@ public class circle extends shapes{
         super.setPerimeter(this.calcPerimeter());
     }
 
-    public String getDiameter(){
-        return "Диаметр: " + formatter.format(diameter) + " мм." + "\n";
+    public double getDiameter(){
+        return diameter;
     }
-    public String getRadius(){
-        return "Радиус: " + formatter.format(radius) + " мм." + "\n";
+    public double getRadius(){
+        return radius;
     }
 
     @Override

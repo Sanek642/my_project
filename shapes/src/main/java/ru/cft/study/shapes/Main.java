@@ -1,8 +1,10 @@
 package ru.cft.study.shapes;
 import java.io.*;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Main {
+
     public static void main(String[] args) {
         ArrayList<shapes> shapesArrayList = new ArrayList<>();
         try(BufferedReader reader = new BufferedReader(new FileReader(args[0])))
@@ -30,15 +32,15 @@ public class Main {
                 for (shapes shapeWrite : shapesArrayList) {
                     if (shapeWrite instanceof circle) {
                         circle c = (circle) shapeWrite;
-                        fileOutputStream.write((c.getName() + c.getArea() + c.getPerimeter() + c.getRadius() + c.getDiameter() + "\n\n").getBytes());
+                        fileOutputStream.write(PrintInfoShapesOne.PrintCircle(c).getBytes());
                     }
                     if (shapeWrite instanceof rectangle) {
                         rectangle r = (rectangle) shapeWrite;
-                        fileOutputStream.write((r.getName() + r.getArea() + r.getPerimeter() + r.getDiagonalLength() + r.getLenght() + r.getWidth() + "\n\n").getBytes());
+                        fileOutputStream.write(PrintInfoShapesOne.PrintRectangle(r).getBytes());
                     }
                     if (shapeWrite instanceof triangle) {
-                        triangle r = (triangle) shapeWrite;
-                        fileOutputStream.write((r.getName() + r.getArea() + r.getPerimeter() + r.getLenghtsAndCors() + "\n\n").getBytes());
+                        triangle tr = (triangle) shapeWrite;
+                        fileOutputStream.write(PrintInfoShapesOne.PrintTriangle(tr).getBytes());
                     }
                 }
             }

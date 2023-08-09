@@ -25,15 +25,15 @@ public class rectangle extends shapes{
         super.setPerimeter(this.calcPerimeter());
     }
 
-    public String getDiagonalLength(){
-        return "Длина диагонали: " + formatter.format(diagonal) + " мм." + "\n";
+    public double getDiagonalLength(){
+        return diagonal;
     }
 
-    public String getLenght(){
-        return "Длина: " + formatter.format(lenght) + " мм." + "\n";
+    public double getLenght(){
+        return lenght;
     }
-    public String getWidth(){
-        return "Ширина: " + formatter.format(width) + " мм." + "\n";
+    public double getWidth(){
+        return width;
     }
 
     @Override
